@@ -1,6 +1,7 @@
 import os
 import pandas as pd
-directory  = '/home/louic/Desktop/parkinsons_project/170111_parkserum/cpmg/'
+print "\n \n \n \n \n"
+directory  = str(raw_input("Enter directory of Bruker files: \n"))
 
 spectra = []
 datafiles = []
@@ -14,6 +15,7 @@ for dir, subdirs, files in os.walk(directory, followlinks = True):
     datafiles.append(titlefile)
 datafiles.sort()
 titles_list = []
+
 for titlefile in datafiles:
     if os.path.exists(titlefile):
       title = open(titlefile).read().strip()
